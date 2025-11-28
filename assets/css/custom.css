@@ -8,3 +8,8 @@ Custom Css
 .btn {
 	background-color: blue !important;
 }
+
+::selection {
+	background: gray !important;
+	color: white;
+}
