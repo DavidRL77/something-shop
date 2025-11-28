@@ -1,3 +1,269 @@
 /*
-Custom Css
+==============================================
+NOTHING OS THEME - ZAY SHOP
+Estética: Industrial, Minimalista, Tech
+==============================================
 */
+
+/* 1. FUENTES (Inter + Space Mono para el toque técnico) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* 
+   NOTAS SOBRE FUENTES ORIGINALES NOTHING:
+   - NDot55 / NDot57: Usar para Títulos Grandes (Simulado aquí con Inter Bold + Uppercase)
+   - NType82: Subtítulos (Simulado con Inter)
+   - Lettera Mono: Datos técnicos (Simulado con Space Mono)
+*/
+
+:root {
+  /* 2. PALETA DE COLORES NOTHING */
+  --nothing-bg: #1B1B1D;
+  --nothing-bg-secondary: #262626;
+  --nothing-text: #FFFFFF;
+  --nothing-text-muted: rgba(255, 255, 255, 0.6);
+  --nothing-red: #D71921;
+  --nothing-border: rgba(255, 255, 255, 0.15);
+  --nothing-border-hover: rgba(255, 255, 255, 0.4);
+}
+
+/* 3. ESTILOS GLOBALES */
+body {
+  background-color: var(--nothing-bg) !important;
+  color: var(--nothing-text) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  /* Tracking ajustado estilo moderno */
+}
+
+/* Eliminar curvas - Estilo "Hardware" */
+* {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  /* Eliminamos sombras default */
+}
+
+/* 4. TIPOGRAFÍA */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3 {
+  font-family: 'Inter', sans-serif !important;
+  color: var(--nothing-text) !important;
+  text-transform: uppercase;
+  /* Estilo industrial */
+  letter-spacing: 0.05em;
+  font-weight: 600 !important;
+}
+
+/* Simulación de estilo técnico para números y precios */
+.price,
+.product-price,
+li,
+.text-muted.text-right {
+  font-family: 'Space Mono', monospace !important;
+}
+
+/* 5. SOBRESCRITURA DE COLORES BOOTSTRAP/TEMPLATE */
+
+/* Fondos */
+.bg-light,
+.bg-white {
+  background-color: var(--nothing-bg) !important;
+  border-bottom: 1px solid var(--nothing-border);
+}
+
+.bg-dark,
+.bg-black,
+footer {
+  background-color: var(--nothing-bg) !important;
+  border-top: 1px solid var(--nothing-border);
+}
+
+/* Textos */
+.text-dark,
+.text-black,
+a {
+  color: var(--nothing-text) !important;
+}
+
+.text-muted {
+  color: var(--nothing-text-muted) !important;
+}
+
+.text-light {
+  color: var(--nothing-text) !important;
+}
+
+/* Acento Rojo Nothing */
+.text-success,
+.h1.text-success,
+.navbar-brand.text-success,
+.logo.text-success {
+  color: var(--nothing-red) !important;
+}
+
+/* 6. COMPONENTES */
+
+/* Navegación */
+.navbar {
+  background-color: rgba(27, 27, 29, 0.95) !important;
+  border-bottom: 1px solid var(--nothing-border);
+  backdrop-filter: blur(10px);
+  /* Efecto cristal moderno */
+}
+
+#templatemo_nav_top {
+  background-color: var(--nothing-bg-secondary) !important;
+  border-bottom: 1px solid var(--nothing-border);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem !important;
+}
+
+/* Botones - Estilo Minimalista/Wireframe */
+.btn-success,
+.bg-success {
+  background-color: transparent !important;
+  border: 1px solid var(--nothing-red) !important;
+  color: var(--nothing-red) !important;
+  font-family: 'Space Mono', monospace !important;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  padding: 10px 25px;
+  transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: var(--nothing-red) !important;
+  color: var(--nothing-text) !important;
+  border-color: var(--nothing-red) !important;
+}
+
+/* Tarjetas de Producto */
+.card {
+  background-color: transparent !important;
+  border: 1px solid var(--nothing-border) !important;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--nothing-border-hover) !important;
+  transform: translateY(-2px);
+}
+
+.card-body {
+  background-color: var(--nothing-bg);
+}
+
+/* Imágenes - Estilo Desaturado/Industrial */
+img.card-img-top,
+img.img-fluid {
+  filter: grayscale(100%) contrast(110%);
+  transition: filter 0.3s ease;
+  mix-blend-mode: normal;
+}
+
+.card:hover img {
+  filter: grayscale(0%) contrast(100%);
+}
+
+/* Inputs de búsqueda */
+.form-control {
+  background-color: transparent !important;
+  border: 1px solid var(--nothing-border) !important;
+  color: var(--nothing-text) !important;
+  font-family: 'Space Mono', monospace;
+}
+
+.form-control:focus {
+  border-color: var(--nothing-text) !important;
+  box-shadow: none !important;
+}
+
+/* Carrusel */
+#template-mo-zay-hero-carousel {
+  background: var(--nothing-bg) !important;
+}
+
+.carousel-indicators li {
+  background-color: var(--nothing-border) !important;
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50% !important;
+  /* Excepción: puntos del carrusel */
+}
+
+.carousel-indicators li.active {
+  background-color: var(--nothing-red) !important;
+}
+
+/* Iconos */
+.fa,
+.fas,
+.fab,
+.far {
+  color: var(--nothing-text);
+}
+
+.text-warning {
+  color: var(--nothing-red) !important;
+  /* Estrellas rojas en lugar de amarillas */
+}
+
+/* Paginación */
+.page-link {
+  background-color: transparent !important;
+  border: 1px solid var(--nothing-border) !important;
+  color: var(--nothing-text) !important;
+  font-family: 'Space Mono', monospace;
+}
+
+.page-link:hover,
+.page-link.active {
+  background-color: var(--nothing-red) !important;
+  border-color: var(--nothing-red) !important;
+  color: white !important;
+}
+
+/* Footer */
+#tempaltemo_footer {
+  border-top: 1px solid var(--nothing-border) !important;
+}
+
+#tempaltemo_footer .border-light {
+  border-color: var(--nothing-border) !important;
+}
+
+/* Ajustes de espaciado */
+.container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Detalles técnicos visuales */
+.navbar-brand {
+  font-weight: 700 !important;
+  letter-spacing: -1px;
+}
+
+/* Scrollbar personalizada (Webkit) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--nothing-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--nothing-border);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--nothing-red);
+}
