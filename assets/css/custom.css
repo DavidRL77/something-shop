@@ -1,3 +1,10 @@
 /*
 Custom Css
 */
+.h1 {
+	color: red !important;
+}
+
+.btn {
+	background-color: blue !important;
+}
