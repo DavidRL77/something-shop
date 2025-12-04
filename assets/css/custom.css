@@ -313,20 +313,3 @@ img.img-fluid {
     transform: translateX(-100vw);
   }
 }
-
-
-.spline-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  pointer-events: none;
-  /* Permite clicks si es necesario, pero Spline suele capturarlos. Si Spline es interactivo, quitar esto */
-}
-
-/* Permitir interacción con el iframe de Spline */
-.spline-overlay iframe {
-  pointer-events: auto;
-}
