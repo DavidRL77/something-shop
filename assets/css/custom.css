@@ -313,3 +313,76 @@ img.img-fluid {
     transform: translateX(-100vw);
   }
 }
+
+/* 
+   ==============================================
+   SECCIÓN CREADOR (Añadido)
+   ==============================================
+*/
+.creator-section {
+  background-color: var(--nothing-bg);
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--nothing-border);
+}
+
+.creator-card {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid var(--nothing-border);
+  cursor: pointer;
+  background-color: #000;
+}
+
+.creator-img,
+.creator-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+}
+
+.creator-video {
+  opacity: 0;
+  z-index: 2;
+}
+
+.creator-img {
+  opacity: 1;
+  z-index: 1;
+  filter: grayscale(100%);
+  /* Estilo Nothing */
+}
+
+.creator-card:hover .creator-video {
+  opacity: 1;
+}
+
+.creator-card:hover .creator-img {
+  opacity: 0;
+}
+
+.creator-info {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.creator-name {
+  font-size: 1.5rem;
+  color: var(--nothing-text);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.creator-role {
+  font-family: 'Space Mono', monospace;
+  color: var(--nothing-red);
+  font-size: 0.9rem;
+}
