@@ -276,31 +276,32 @@ img.img-fluid {
    ==============================================
 */
 .imagen-contenedor {
-  width: 100vw;
-  /* Ancho completo de la ventana */
-  height: 400px;
-  /* Puedes ajustarlo o poner vh */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  position: relative;
+  z-index: 0;
+  /* Debajo del contenido del carousel */
 }
 
 .imagen-movimiento {
   display: flex;
-  width: calc(200%);
+  width: 200%;
   /* Dos veces el ancho de la pantalla */
   animation: slide 20s linear infinite;
-  /* Ajusta duración según velocidad */
+  /* Ajusta la velocidad aquí */
 }
 
 .imagen-movimiento img {
   width: 100vw;
   /* Cada imagen ocupa toda la pantalla */
-  height: 400px;
+  height: 100%;
+  /* Ajusta a todo el contenedor */
   flex-shrink: 0;
   object-fit: cover;
-  /* Asegura que la imagen cubra el área sin deformarse */
-  filter: grayscale(100%) opacity(0.5);
-  /* Opcional: para que no compita con el 3D */
+  /* Para que la imagen cubra todo sin deformarse */
 }
 
 @keyframes slide {
@@ -310,9 +311,9 @@ img.img-fluid {
 
   100% {
     transform: translateX(-100vw);
-    /* Mueve el ancho de la pantalla */
   }
 }
+
 
 .spline-overlay {
   position: absolute;
